@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Event Request</title>
+<th:block th:replace="fragments/head">
+</head>
+<body>
+	<div class="background">
+		<div class="foreground">
+			<div th:replace="fragments/navbar"></div>
+			<br /> <br />
+			<img class="mx-auto d-block img-fluid gallery-head" th:src="@{/images/galleryhead.jpeg}"/>
+			<br/><br/>
+			<div class="gallery">
+				<div class="row">
+					<div class="col-md-4">
+						<img class="mx-auto d-block img-fluid" th:src="@{/images/event2.jpeg}"/>
+					</div>
+					<div class="col-md-4">
+						<img class="mx-auto d-block img-fluid" th:src="@{/images/event3.jpeg}"/>
+					</div>
+					<div class="col-md-4">
+						<img class="mx-auto d-block img-fluid" th:src="@{/images/event4.jpeg}"/>
+					</div>
+				</div>
+				<br/><br/>
+				<div class="row">
+					<div class="col-md-4">
+						<img class="mx-auto d-block img-fluid" th:src="@{/images/event5.jpeg}"/>
+					</div>
+					<div class="col-md-4">
+						<img class="mx-auto d-block img-fluid" th:src="@{/images/event6.jpeg}"/>
+					</div>
+					<div class="col-md-4">
+						<img class="mx-auto d-block img-fluid" th:src="@{/images/event7.jpeg}"/>
+					</div>
+				</div>
+				<br/><br/>
+				<div class="row">
+					<div class="col-md-4">
+						<img class="mx-auto d-block img-fluid" th:src="@{/images/event8.jpeg}"/>
+					</div>
+					<div class="col-md-4">
+						<img class="mx-auto d-block img-fluid" th:src="@{/images/event9.jpeg}"/>
+					</div>
+					<div class="col-md-4">
+						<img class="mx-auto d-block img-fluid" th:src="@{/images/event10.jpeg}"/>
+					</div>
+				</div>
+			</div>
+			<br/><br/><br/><br/><br/><br/>
+		</div>
+	</div>
+	<div th:replace="fragments/footer"></div>
+</body>
+</html>

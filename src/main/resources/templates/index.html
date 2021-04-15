@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Event Request</title>
+<th:block th:replace="fragments/head">
+</head>
+<body>
+
+	<div class="background">
+		<div class="foreground">
+			<div th:replace="fragments/navbar"></div>
+			<div class="text-center header">
+				<br /> <br />
+				<h1>Expert Event Planning</h1>
+				<h3>Let us flawlessly execute your next event!</h3>
+				<br />
+			</div>
+			<br />
+			<p class="text-center info">Please use this form to submit your request:</p>
+			<br />
+			<div class="container justify-content-center">
+				<form class="form-floating" action="#" th:action="@{/}"
+					th:object="${event}" method="post">
+					<div class="field-label"><p>Event Information:</p></div>
+					<div class="row g-5">
+
+						<div class="col-md-4">
+							<input type="text" th:field="*{eventName}"
+								class="form-control shadow-sm rounded field" placeholder="Event Name"
+								id="floatingInputGrid">
+						</div>
+						<div class="col-md-4">
+							<input type="date" th:field="*{eventDate}"
+								class="form-control shadow-sm rounded field" placeholder="Date"
+								id="floatingInputGrid">
+						</div>
+						<div class="col-md-4">
+							<input type="text" th:field="*{eventLocation}"
+								class="form-control shadow-sm rounded field" placeholder="Location"
+								id="floatingInputGrid">
+						</div>
+					</div>
+					<br />
+					<div class="field-label"><p>Contact Information:</p></div>
+					<div class="row g-5">
+
+						<div class="col-md-4">
+							<input type="text" th:field="*{customerFirstName}"
+								class="form-control shadow-sm rounded field" placeholder="First Name"
+								id="floatingInputGrid">
+						</div>
+						<div class="col-md-4">
+							<input type="text" th:field="*{customerLastName}"
+								class="form-control shadow-sm rounded field" placeholder="Last Name"
+								id="floatingInputGrid">
+						</div>
+						<div class="col-md-4">
+							<input type="email" th:field="*{customerEmail}"
+								class="form-control shadow-sm rounded field" placeholder="Email"
+								id="floatingInputGrid">
+						</div>
+					</div>
+					<br />
+					<div class="text-center">
+						<button type="submit" class="btn btn-secondary shadow-sm rounded">Submit</button>
+					</div>
+				</form>
+			</div>
+			<br /><br /><br /><br />
+			<img class="mx-auto d-block img-fluid event-image" th:src="@{/images/Event1.jpeg}"/>
+			<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		</div>
+	</div>
+	<div th:replace="fragments/footer"></div>
+</body>
+</html>

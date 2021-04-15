@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Event Request Submitted</title>
+	<th:block th:replace="fragments/head">
+</head>
+<body>
+	<div class="background">
+		<div class="foreground">
+			<div th:replace="fragments/navbar"></div>
+			<br /> <br /> <br /> <br />
+			<div class="text-center confirmation">
+				<h3>Request Receipt Confirmation</h3>
+				<br />
+				<p class="info">Thank you for submitting your request!</p>
+				<br />
+				<h4>Event Information:</h4>
+				<p class="info" th:text="${eventName}" />
+				<p class="info" th:text="${#dates.format(eventDate, 'MMMMM d, yyyy')}" />
+				<p class="info" th:text="${eventLocation}" />
+				<h4>Contact Information:</h4>
+				<p class="info" th:text="${customerFirstName} + ' ' + ${customerLastName}" />
+				<p class="info" th:text="${customerEmail}" />
+			</div>
+			<br />
+			<img class="mx-auto d-block img-fluid success-image" th:src="@{/images/success1.png}"/>
+		</div>
+	</div>
+	<div th:replace="fragments/footer"></div>
+</body>
+</html>
