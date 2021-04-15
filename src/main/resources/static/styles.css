@@ -1,6 +1,7 @@
 .event-image {
 	width: 50%;
 	position: relative;
+	border: 2px solid #ffffff;
 }
 
 .success-image {
@@ -11,11 +12,16 @@
 .gallery-head {
 	width: 50%;
 	position: relative;
+	border: 2px solid #ffffff;
 }
 
 .gallery {
 	padding-left: 15px;
 	padding-right: 15px;
+}
+
+.gal-img {
+	border: 1px solid #ffffff;
 }
 
 .header {
